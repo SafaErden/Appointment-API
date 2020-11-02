@@ -14,3 +14,6 @@ Ruby is dynamically typed and uses garbage collection. It supports multiple prog
 c = Course.create(name: :HTML, description: "Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.")
 c = Course.create(name: :CSS, description: "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.")
 c = Course.create(name: :SQL, description: "S-Q-L; Structured Query Language) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS). It is particularly useful in handling structured data, i.e. data incorporating relations among entities and variables.")
+
+z = Timezone.create(zone: "UTC+1")
+z = Timezone.create(zone: "UTC-6")

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_082214) do
+ActiveRecord::Schema.define(version: 2020_11_02_092817) do
 
   create_table "course_appointments", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_11_02_082214) do
     t.datetime "course_date", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "timezone"
     t.index ["course_id"], name: "index_course_appointments_on_course_id"
     t.index ["user_id"], name: "index_course_appointments_on_user_id"
   end
@@ -25,6 +26,12 @@ ActiveRecord::Schema.define(version: 2020_11_02_082214) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "timezones", force: :cascade do |t|
+    t.string "zone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
