@@ -1,4 +1,5 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :authorized, except: [:create, :login]
   def create
     @user = User.create(user_params)
     if @user.valid?
@@ -23,6 +24,6 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.permit(:username, :password)
   end
 end
