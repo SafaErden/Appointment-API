@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :courses, only: %i[index show]
       resources :appointments, only: %i[create destroy edit]
       post '/login', to: 'users#login'
+      get '/my', to: 'courses#user_courses'
     end
   end
 end

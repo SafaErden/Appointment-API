@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_092817) do
+ActiveRecord::Schema.define(version: 2020_11_03_131349) do
 
   create_table "course_appointments", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "course_id", null: false
-    t.datetime "course_date", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "timezone"
+    t.string "course_date"
     t.index ["course_id"], name: "index_course_appointments_on_course_id"
     t.index ["user_id"], name: "index_course_appointments_on_user_id"
   end
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_11_02_092817) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
   end
 
   create_table "timezones", force: :cascade do |t|

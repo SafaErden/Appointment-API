@@ -1,8 +1,8 @@
 class Api::V1::AppointmentsController < ApplicationController
   def create
-    @appointment = logged_in_user.courses.create(appointment_params)
+    @appointment = CourseAppointment.create(appointment_params)
     if @appointment.valid?
-      render json: { appointment: @appointment }
+      render json: { error: @appointment }
     else
       render json: { error: @appointment.errors.full_messages[0] }
     end
@@ -11,6 +11,6 @@ class Api::V1::AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:user_id, :course_id, appointment_date)
+    params.require(:appointment).permit(:user_id, :course_id, :course_date)
   end
 end
