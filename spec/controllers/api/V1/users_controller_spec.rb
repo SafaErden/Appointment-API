@@ -18,7 +18,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     end
 
     it 'returns the created user' do
-      expect(JSON.parse(response.body)['error']).to eq("Invalid Username or Password")
+      expect(JSON.parse(response.body)['error']).to eq('Invalid Username or Password')
     end
   end
 end

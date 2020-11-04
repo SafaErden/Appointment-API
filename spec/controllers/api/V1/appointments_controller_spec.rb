@@ -8,11 +8,11 @@ RSpec.describe Api::V1::AppointmentsController, type: :controller do
   describe 'POST creates a new appointment' do
     before do
       allow(controller).to receive(:authorized).and_return(true)
-      post :create, params: { user_id: 1, course_id: 1, course_date: "UTC-6" }
+      post :create, params: { user_id: 1, course_id: 1, course_date: 'UTC-6' }
     end
 
     it 'returns the created appointment' do
-      expect(JSON.parse(response.body)["error"]["id"]).to eq(1)
+      expect(JSON.parse(response.body)['error']['id']).to eq(1)
     end
   end
 end
