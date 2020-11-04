@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :authorized, except: [:create, :login]
+  before_action :authorized, except: %i[create login]
   def create
     @user = User.create(user_params)
     if @user.valid?
@@ -11,7 +11,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def login
-    @user =User.find_by(username: params[:username])
+    @user = User.find_by(username: params[:username])
 
     if @user&.authenticate(params[:password])
       token = encode_token({ user_id: @user.id })
