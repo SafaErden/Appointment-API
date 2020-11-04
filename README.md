@@ -7,7 +7,7 @@ A RESTFUL API built with Ruby on Rails. Its uses BCrypt and JWT gems to implemen
 This API is built as the back end for a web application built with React on the front end and is separately deployed to Netlify.
 
 ## End Points
-There are a couple of endpoints exposed by this api and can be accessed online using (this path) as the base Url.
+There are a couple of endpoints exposed by this api and can be accessed online using [this path](https://mysterious-sands-69986.herokuapp.com/) as the base Url.
 
 POST
 /users - (create user account)
@@ -16,7 +16,6 @@ POST
 
 GET
 /courses - (fetch all courses)
-/courses/:id - (fetch specific course)
 /my - (fetch booked courses)
 
 DELETE
@@ -28,6 +27,7 @@ DELETE /appointments/:id - (delete appointment)
 -JWT gem
 -Postgresql
 -Heroku
+-Rspec
 
 ## Live Demo
 For the full working application Click here
