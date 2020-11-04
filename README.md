@@ -1,6 +1,6 @@
 # Macroverse Course Service API
 
-A RESTFUL API built with Ruby on Rails. Its uses BCrypt and JWT gems to implement Authentication & Authorization. It performs CRUD operations on the various resources it serves.
+A RESTFUL API built with Ruby on Rails. It uses BCrypt and JWT gems to implement Authentication & Authorization. It performs CRUD operations on the various resources it serves.
 
 ## About this project
 
