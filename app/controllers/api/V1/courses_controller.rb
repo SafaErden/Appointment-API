@@ -1,8 +1,15 @@
 class Api::V1::CoursesController < ApplicationController
   def index
     @courses = Course.all
-    if @courses
-      render json: { course: @courses }
+    @uc = logged_in_user.courses.map do |c|
+        c.id 
+    end
+    @result = @courses.filter do |c|
+      c if @uc.exclude? c.id
+    end
+
+    if @result
+      render json: { course: @result }
     else
       render json: { error: 'Something went wrong' }
     end
