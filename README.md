@@ -10,16 +10,16 @@ This API is built as the back end for a web application built with React on the 
 There are a couple of endpoints exposed by this api and can be accessed online using [this path](https://mysterious-sands-69986.herokuapp.com/) as the base Url.
 
 POST
-/users - (create user account)
-/appointments - (create appointment)
-/login - (create user session)
+-/users - (create user account)
+-/appointments - (create appointment)
+-/login - (create user session)
 
 GET
-/courses - (fetch all courses)
-/my - (fetch booked courses)
+-/courses - (fetch all courses)
+-/my - (fetch booked courses)
 
 DELETE
-DELETE /appointments/:id - (delete appointment)
+-/appointments/:id - (delete appointment)
 
 ## Built With
 -Ruby on Rails
