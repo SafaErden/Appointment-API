@@ -30,7 +30,7 @@ DELETE /appointments/:id - (delete appointment)
 -Rspec
 
 ## Live Demo
-For the full working application Click here
+For the full working application Click [here](https://mysterious-sands-69986.herokuapp.com/)
 
 ## Installation
 To get a local copy up and running follow these simple example steps.
