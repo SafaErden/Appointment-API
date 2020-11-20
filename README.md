@@ -1,24 +1,70 @@
-# README
+# Macroverse Course Service API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A RESTFUL API built with Ruby on Rails. It uses BCrypt and JWT gems to implement Authentication & Authorization. It performs CRUD operations on the various resources it serves.
 
-Things you may want to cover:
+## About this project
 
-* Ruby version
+This API is built as the back end for a web application built with React on the front end and is separately deployed to Netlify.
 
-* System dependencies
+## End Points
+There are a couple of endpoints exposed by this api and can be accessed online using [this path](https://fathomless-shelf-78681.herokuapp.com/) as the base Url.
 
-* Configuration
+POST
+-/users - (create user account)
+-/appointments - (create appointment)
+-/login - (create user session)
 
-* Database creation
+GET
+-/courses - (fetch all courses)
+-/my - (fetch booked courses)
 
-* Database initialization
+DELETE
+-/appointments/:id - (delete appointment)
 
-* How to run the test suite
+## Built With
+-Ruby on Rails
+-BCrypt gem
+-JWT gem
+-Postgresql
+-Heroku
+-Rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+## Live Demo
+For the full working application Click [here](https://fathomless-shelf-78681.herokuapp.com/)
 
-* Deployment instructions
+## Installation
+To get a local copy up and running follow these simple example steps.
 
-* ...
+### Setup
+Clone [this](https://github.com/SafaErden/Appointment-API) repo
+
+### Follow:
+1. cd into the project directory
+2. run bundle install
+3. run rails db:migrate
+4. run rails db:seed
+5. run rails db:seed
+6. replace ENV variables with yours in application.rb
+7. Navigate to localhost:3001
+
+
+## Author
+
+👤 **Safa ERDEN**
+
+- Github: [@SafaErden](https://github.com/SafaErden)
+- Twitter: [@safaerden](https://twitter.com/safaerden)
+- Linkedin: [SafaErden](https://www.linkedin.com/in/safaerden/)
+- Mql5: [safaerden](https://www.mql5.com/en/users/safaerden)
+- Email: [safaerden](mailto:safaerden@gmail.com)
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/SafaErden/Appointment-API/issues)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
